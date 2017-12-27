@@ -1,0 +1,259 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+        <title>Bertha&rsquo;s Deluxe Chocolates</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="ui/css/trontastic/jquery-ui-1.10.4.custom.css">
+
+        <script src="ui/js/jquery-1.10.2.js"></script>
+        <script src="ui/js/jquery-ui-1.10.4.custom.js"></script>
+        <!--<script src="modal.js"></script>-->
+        <!--<script type="text/javascript" src="http://jadran.sdsu.edu/jquery/jquery.js"></script>-->
+        <script type="text/javascript" src="ajax_get_lib.js"></script>
+        <!--<script type="text/javascript" src="ajax_populate_page.js"></script>-->
+        <script type="text/javascript" src="shopping_cart.js"></script>
+        <style>
+            .quantity-box {
+                float: left;
+                width: 27px;
+                padding-top: 5px;
+            }
+            .quantity-input{
+                border: none;
+                border: #bebebe 1px solid;
+                color: #bebebe;
+                padding: 4px;
+                text-align: left;
+                height: 19px;
+                width: 25px;
+                text-align: center;
+                font-weight: 700;
+                padding: 2px;
+            }
+            .quantity-controls {
+                height: 14px;
+                border: none;
+                width: 15px;
+                color: #fff;
+                background-color: #00a000;
+                width: 15px;
+                float: left;
+                padding-top: 2px;
+                margin: 0 0 0 10px;
+             }
+            .addtocart-button {
+                width: 152px;
+                float: right;
+                margin: 0 0 0 10px;
+            }
+            .addtocart-button input.addtocart-button, span.addtocart-button input.notify-button {
+            width: 152px;
+            background-position: 0 -160px;
+            color: #fff;
+            background-color: #00a000;
+            border: solid #00a000 1px;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            height: 34px;
+            text-align: center;
+            letter-spacing: 1px;
+            padding: 4px 5px;
+        }
+
+            #quantity {
+            text-align: center;
+            padding: 5px;
+            border: 1px dotted #ccc;
+            margin: 2%;
+        }
+        .qty {
+            width: 40px;
+            height: 25px;
+            text-align: center;
+        }
+        input.qtyplus { width:25px; height:25px;}
+        input.qtyminus { width:25px; height:25px;}
+
+        #itemImg{
+            /*background-color:#eee;*/
+            display: table-cell;
+            vertical-align:middle;
+            padding:3px;
+            width:50%;
+        }
+        #itemDescr{
+            /*background-color:#dddddd;*/
+            display: table-cell;
+            vertical-align:middle;
+            padding:3px;
+            width:50%;
+        }
+        #addQty{
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div id="bgpic"><img src="./img/thumb-1920-409129.jpg" alt="background image" /></div>
+        <div id="main">
+            <div id="maincontainer" class="container">
+            <div id="navi">
+                <div class="logo"><span>Bertha&rsquo;s</span><br/><span>Deluxe Chocolates</span></div>
+                <ul>
+                    <li class="line">&nbsp;</li>
+                    <li id="home-li-link"><a href="index.html">Home</a></li>
+                    <li id="products-li-link"><a href="products.html">Products</a></li>
+                    <ul id="prodList">
+                        <li><a href="#"  id="milk">Milk Chocolate    </a> </li>
+                        <li><a href="#"  id="dark">Dark Chocolate    </a> </li>
+                        <li><a href="#"  id="nuts">Nuts and Chews     </a> </li>
+                        <li><a href="#"  id="brittle"> Brittles and Toffies</a> </li>
+                        <li><a href="#"  id="truffles">Truffles            </a> </li>
+                        <li><a href="#"  id="gifts" >Gifts               </a> </li>
+                        <li><a href="#"  id="holiday"> Holiday assortments </a> </li>
+                    </ul>
+                    <li id="menu_Nutritionfacts_e"><a href="order_online.html">Order Online</a></li>
+                    <li id="menu_P_Product_range_USA"><a href="aboutus.html">About US</a></li>
+                    <li id="menu_Origins_of_chocolate"><a href="contact.html">contact</a></li>
+                    <li><img src="img/ic_shopping_cart_white_24dp_1x.png" alt="cartImg"/><a href="cart.html"><button id="cartButton">Cart: <span id="cartCount">0</span></button> </a> </li>
+
+                </ul>
+            </div><!-- navi Ende -->
+
+            <div id="maincontent" class="content">
+
+                <div class="ui-widget">
+                    <h3 class="openProduct">Toffee-ettes,Danish butter toffee</h3>
+
+                    <!--<input type="button" id="open" name="open_dialog" value="Open Dialog" />-->
+                    <div id="itemImg">
+                        <img src="PROJ4_IMAGES/1J94K63Y9.jpg" alt="covered with chocolate and almonds" width="200px"/>
+
+                    </div>
+                    <div id="itemDescr">
+                        <p>covered with chocolate and almonds.,Irresistible bite-size pieces of
+                            rich Danish butter toffee with whole almonds are smothered in Bertha's creamy milk
+                            chocolate, then covered with bits of toasted almonds. Keep a canister on hand for
+                            unexpected guests or take one to the office.</p>
+                        <p>Product SKU: 1J94K63Y9</p>
+                        <p>Net Weight: 1lb.</p>
+                        <p>Sales price: 16.5</p>
+                    </div>
+                    <div id="addQty">
+                        <input type='text' name='quantity' value='1' class='qty' />
+                        <input type='button' value='-' class='qtyminus' field='quantity' />
+                        <input type="button" value="+" class="qtyplus" field="quantity" />
+                        <input type="button" value="Add to Cart" id="addButton" class="btn"/>
+                    </div>
+                </div>  <!-- end ui-widget -->
+
+
+            </div><!-- maincontent Ende -->
+            </div><!-- maincontainer Ende -->
+        </div><!-- main Ende -->
+
+    <script>
+
+
+
+
+//    function updateDisplay() {
+//        var cartArray = cart.getCartArray();
+//        var toWrite = "<table>";
+//        toWrite += "<tr><th>SKU</th><th>Quantity</th></tr>";
+//
+//        for(i=0; i < cartArray.length; i++) {
+//            toWrite += "<tr>";
+//            toWrite += "<td>"+cartArray[i][0]+"</td>";
+//            toWrite += "<td>"+cartArray[i][1]+"</td>";
+//            toWrite += "</tr>";
+//            }
+//        toWrite += "</table>";
+//        $('#cart').html(toWrite);
+//        $('#count').text(cart.size());
+//        }
+
+
+        // This button will increment the value
+    $('.qtyplus').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If is not undefined
+        if (!isNaN(currentVal)) {
+            // Increment
+            $('input[name='+fieldName+']').val(currentVal + 1);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(1);
+        }
+    });
+    // This button will decrement the value till 0
+    $(".qtyminus").click(function(e) {
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If it isn't undefined or its greater than 0
+        if (!isNaN(currentVal) && currentVal > 1) {
+            // Decrement one
+            $('input[name='+fieldName+']').val(currentVal - 1);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(1);
+        }
+    });
+/*-------------------------Add to cart Function-----------------------*/
+
+
+
+//	$('#addButton').button({
+//	  icons: {
+//	    secondary: "ui-icon ui-icon-cart"
+//	  }
+//	});
+//
+//	/* Add to Cart Button Clicked */
+//	$('#addButton').on('click', function(){
+//		/* Update Cart Count */
+//		/* Transfer to Cart Main Page */
+//
+//	});
+
+    $("#ui-widget").dialog({
+            height: 350,
+            width: 500,
+            modal: true,
+            autoOpen: false,
+            buttons: [{text: "Done", click: function()
+               {$(this).dialog('close');}
+                      }]
+    });
+
+
+
+
+    $('#addButton').bind('click', function($e) {
+            $("#ui-widget").dialog('open');
+    });
+
+
+
+
+    </script>
+    </body>
+</html>

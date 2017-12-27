@@ -1,0 +1,295 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+        <title>Bertha&rsquo;s Deluxe Chocolates</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript" src="http://jadran.sdsu.edu/jquery/jquery.js"></script>
+        <script type="text/javascript" src="form.js"></script>
+
+        <style type="text/css">
+            body {
+    background-color: #EEF;
+    }
+
+
+
+
+</style>
+    </head>
+    <body>
+        <div id="bgpic"><img src="./img/thumb-1920-409129.jpg" alt="background image" /></div>
+        <div id="main">
+            <div id="maincontainer" class="container">
+            <div id="navi">
+                <div class="logo"><span>Bertha&rsquo;s</span><br/><span>Deluxe Chocolates</span></div>
+                <ul>
+                    <li class="line">&nbsp;</li>
+                    <li id="home-li-link"><a href="index.html">Home</a></li>
+                    <li id="products-li-link"><a href="products.html">Products</a></li>
+                    <li id="menu_Nutritionfacts_e"><a href="order_online.html">Order Online</a></li>
+                    <li id="menu_P_Product_range_USA"><a href="aboutus.html">About US</a></li>
+                    <li id="menu_Origins_of_chocolate"><a href="contact.html">contact</a></li>
+                    <li><img src="img/ic_shopping_cart_white_24dp_1x.png" alt="cartImg"/><a href="cart.html"><button id="cartButton">Cart: <span id="cartCount">0</span></button> </a> </li>
+
+                </ul>
+            </div><!-- navi Ende -->
+
+    <div id="maincontent" class="content">
+    <div  style="padding-top:10px;line-height: 10px;text-align: center; color: red;" id="message_line">&nbsp;</div>
+
+        <form id="chekout-form" name="checkout-form" method="post" action="/perl/jadrn030/proj4/read_cookie.cgi">
+
+            <fieldset>
+            <legend>Billing Information</legend>
+                <ul id="billing-table">
+                        <li>
+                            <label for="billing-fname">First Name:</label>
+                            <input type="text" name="billing-fname" id="billing-fname" size="20"  />
+                            <label for="billing-lname">Last Name:</label>
+                            <input type="text" name="billing-lname" id="billing-lname" size="20"  />
+                        </li>
+                        <li>
+                            <label for="billing-address1">Address1:</label>
+                            <input type="text" name="billing-address1" id="billing-address1" size="50" />
+                        </li>
+                        <li>
+                            <label for="billing-address2">Address2:</label>
+                            <input type="text" name="billing-address2" id="billing-address2" size="50" />
+                        </li>
+                        <li>
+                            <label for="billing-city">City:</label>
+                            <input type="text" name="billing-city" id="billing-city" size="15" />
+                            <label for="billing-state">State:</label>
+                            <!--<input type="text" name="state" id="billing-state" size="5" />-->
+
+                               <select class="state" name="billing-state" id="billing-state">
+                                <option value="">- Select State -</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="DC">DC</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+
+                            <label for="billing-zip">Zipcode:</label>
+                            <input type="text" name="billing-zip" id="billing-zip" size="5" maxlength="5" />
+                        </li>
+                        <li>
+                            <label for="billing-phone">Phone</label>
+                            &lpar;<input type="text" id="billing-acode" name="billing-area_phone" id="billing-phone" size="3" maxlength="3" />&rpar;&nbsp;-&nbsp;
+                            <input type="text" id="billing-preph" name="billing-prefix_phone" size="3" maxlength="3" />&nbsp;-&nbsp;
+                            <input type="text" id="billing-ph" name="billing-phone" size="4" maxlength="4" />
+                        </li>
+                        <li>
+                            <label for="sameAsBilling">Shipping Address is Same As Billing Address </label>
+                            <input type="checkbox" id="sameAsBilling" name="same" onchange="billingFunction()" />
+                        </li>
+
+                    </ul>
+            </fieldset>
+            <fieldset>
+            <legend>Shipping Information</legend>
+                <ul id="shipping-table">
+                        <li>
+                            <label for="shipping-fname">First Name:</label>
+                           <input type="text" name="shipping-fname" id="shipping-fname" size="20"  />
+                            <label for="shipping-lname">Last Name:</label>
+                            <input type="text" name="shipping-lname" id="shipping-lname" size="20"  />
+                        </li>
+                        <li>
+                            <label for="shipping-address1">Address:</label>
+                            <input type="text" name="shipping-address1" id="shipping-address1" size="50" />
+                        </li>
+                        <li>
+                            <label for="shipping-address2">Address:</label>
+                            <input type="text" name="shipping-address2" id="shipping-address2" size="50" />
+                        </li>
+                        <li>
+                            <label for="shipping-city">City:</label>
+                            <input type="text" name="shipping-city" id="shipping-city" size="15" />
+                            <label for="shipping-state">State:</label>
+
+                            <select class="state" name="shipping-state" id="shipping-state">
+                                <option value="">- Select State -</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="DC">DC</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+
+                            <label for="shipping-zip">Zipcode:</label>
+                            <input type="text" name="shipping-zip" id="shipping-zip" size="5" maxlength="5" />
+                        </li>
+                        <li>
+                            <label for="shipping-phone">Phone</label>
+                            &lpar;<input type="text" name="shipping-area_phone" id="shipping-phone" size="3" maxlength="3" />&rpar;&nbsp;-&nbsp;
+                            <input type="text" name="shipping-prefix_phone" size="3" maxlength="3" />&nbsp;-&nbsp;
+                            <input type="text" name="shipping-phone" size="4" maxlength="4" />
+                        </li>
+
+                    </ul>
+
+            </fieldset>
+            <fieldset>
+            <legend>Payment Information</legend>
+                <ul id="ul-ccard">
+                        <li>
+                            <label for="ccard-name">Payment Type</label>
+                            <!--<td colspan="2"><input type="text" name="ccard-name" id="ccard-name" size="20"  />-->
+
+                               <select class="ccard" name="ccard-name" id="ccard-name">
+                                <option value="Visa">Visa</option>
+                                <option value="MasterCard">MasterCard</option>
+                                <option value="Discover">Discover</option>
+                                <option value="American Express">American Express</option>
+                               </select>
+
+                            <label for="ccard-num">Card Number:</label>
+                            <input type="text" name="ccard-num" id="ccard-num" size="16" maxlength="16"  />
+                            <label id="exp-date-label">Exp. date:</label>
+                            <select class="ccard-exp-mon" name="month">
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select class="ccard-exp-yr" name="yr">
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+
+                            </select>
+<!---->
+
+                        </li>
+
+                    </ul>
+
+
+            </fieldset>
+
+            <div class="checkout-form-buttons">
+                <input type="reset" value="cancel" />
+                <input type="submit" value="Submit" />
+            </div>
+           </form>
+
+
+            </div><!-- maincontent Ende -->
+            </div><!-- maincontainer Ende -->
+        </div><!-- main Ende -->
+    </body>
+
+</html>
