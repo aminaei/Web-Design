@@ -1,0 +1,79 @@
+/* Three column with top banner template
+   Alan Riggins,
+   
+   The problem here is that the banner row along the top will cause the width
+   of the page to exceed 100%.  You will have scroll bars even though
+   the content doesn't reach the bottom of the browser window.
+   
+   The solution is to use absolute positioning for the banner along the 
+   top.  This pulls the banner div out of the normal document flow.  The
+   three columns underneath can then occupy 100% of the height without
+   causing the unnecessary scroll bars to appear.  The padding at the
+   top of the three divs' content must be set to move it down, otherwise 
+   it would be hidden underneath the banner.  
+   
+   Note:  if you add margin or 
+   padding to the div containers, the highth will exceed 100% and you have
+   the same problem again--the unnecessary scroll bars.  Set the padding-top
+   on the p tags inside the divs instead.  I have class="top" for the first
+   paragraph in each div.
+*/   
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    }
+    
+html, body {
+    height: 100%;
+    }
+    
+h1 {
+    padding: 20px 0 0 0;
+    text-align: center;
+    }   
+    
+div {
+    height: 100%;
+    }
+    
+p {
+    padding: 0 20px 0 20px;
+    }    
+    
+p.top {
+    padding-top: 120px;
+    }         
+    
+#banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #EEF;
+    background-color: #55F;
+    height: 100px;
+    width: 100%;
+    }  
+    
+#left_column {
+    float: left;
+    height: 100%;
+    width: 200px;
+    background-color: #FAA;
+    }
+    
+#middle_column {
+    height: 100%;
+    background-color: #FFA;
+    padding: 0 20px 0 200px;
+    }  
+    
+#right_column {
+    float: right;
+    width: 200px;
+    height: 100%;
+    background-color: #DDD;
+    }
+                
