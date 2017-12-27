@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+    vertical-align:baseline;
+	font: inherit;
+
+}
+html {
+    background: rgb(123, 121, 143);
+}
+section,div,table,img {
+    display: block;
+}
+body{
+    font-family: Georgia;
+	font-size: 100%;
+	width: 80%;
+    min-width: 800px;
+	background: white;
+	margin: 0 auto;
+}
+
+
+h1 {
+	font-size: 1.6em;
+}
+h2 {
+	font-size: 1.2em;
+}
+#main ul {
+    margin-left: 10px;
+}
+
+#main{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    height: auto;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+#main h1 {
+	background-position: left -790px;
+	padding: 0 0 5px;
+
+}
+#main p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#pageHeader{
+    background: rgb(100, 98, 102);
+	padding-top: 1px;
+	overflow: hidden;
+	padding-left: 50px;
+}
+#pageHeader h1 {
+	font-size: 3.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 100px;
+	line-height: 165px;
+	margin-right: .5em;
+	float: left;
+	padding-left: 10px;
+	color: #fff;
+    font-family: "Old English";
+    font-style: italic;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+a:hover {
+	color: #7B798F;
+	border-bottom: 1px solid #7B798F;
+
+}
+.flowRight {
+	float: right;
+	margin-left: 10px;
+    padding-right: 10px;
+    width: 280px;
+}
+.flowRight li{
+    background: rgb(216, 213, 188);
+    display: inline-block;
+	width: 280px;
+}
+.flowRight li a {
+	color:rgb(76, 67, 65);
+	border: none;
+	padding-left: 20px;
+	line-height: 50px;
+	font-size: 18px;
+	display:block;
+    text-decoration: none;
+	border-bottom: 1px dotted rgb(219,126,64);
+}
+.flowRight li:nth-child(even) {
+	/*background: #7B798F;*/
+    background: rgb(237, 228, 214)
+
+}
+.flowRight a:hover {
+	/*color: rgb(219,126,64);*/
+    color: #fff;
+    border:none;
+    background: rgb(100, 98, 102);
+}
+#pageFooter{
+    display:block;
+    background: rgb(173, 169, 130);
+	padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+#pageFooter label {
+	display: block;
+	font-size: 18px;
+	text-transform:uppercase;
+    margin-left: 10px;
+}
+
+#pageFooter p {
+	float: right;
+	clear: right;
+	margin-right: 3.9%;
+	text-align: right;
+
+}
+
+.banner {
+	height: 400px;
+	padding-left: 50px;
+	overflow: hidden;
+    margin-bottom: 4em;
+	position: relative;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.banner h1 {
+	font-size: 40px;
+    font-style: italic;
+	color: #fff;
+	padding-top: 290px;
+	letter-spacing:2px;
+	text-transform: uppercase;
+}
+
+.banner p {
+	width: 300px;
+	padding: 15px 15px 0;
+	height: 335px;
+	font-size: 1.2em;
+	color: #fff;
+	background: rgba(123, 121, 143, .8);
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#main .food_img{
+    display: inline-block;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+#main .food_hr{
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: whitesmoke;
+}
+
+strong { font-weight: bold; }
+
+
+#main table,th,td{
+    width: 75%;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px;
+}
+#main td{
+    background-color: rgb(216, 213, 188);
+}
+#main th{
+    background-color: rgb(237, 228, 214);
+}
