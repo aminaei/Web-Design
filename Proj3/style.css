@@ -1,0 +1,57 @@
+body { 
+    background-color: #EEF; 
+    }
+h1,h2 { 
+    text-align: center;
+    }    
+form {
+    padding: 20px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;    
+    }  
+fieldset {
+    width: 650px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #777777;
+    background-color: #EEE;  
+    border-radius: 10px;      
+    }      
+legend {
+    font-size: smaller;
+    font-family: arial, helvetica;
+    }    
+label {
+    float: left;
+    width: 100px;
+    text-align: right;
+    clear: left;
+    margin-right: 20px;
+    line-height: 28px;
+    }
+input {
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 3px;
+    }   
+input:focus {
+    border: 1px solid blue;
+    }    
+.buttons {
+    padding-left: 200px;
+    padding-top: 20px;
+    border-radius: 15px;    
+    }  
+    
+table {
+    width: 400px;
+    margin: auto;
+    margin-collapse: collapse;
+    }
+    
+td  {
+    border: 1px solid black;
+    padding: 5px;
+    }            
